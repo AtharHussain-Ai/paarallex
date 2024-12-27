@@ -1,0 +1,159 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#work {
+    padding: 150px;
+    width: 100%;
+    height: auto;
+    background-color: #dedede;
+}
+
+#work .workrow {
+    padding: 0 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.workrow h1 {
+    display: flex;
+    align-items: baseline;
+    font-size: 8vw;
+    font-weight: 500;
+}
+
+.workrow h1 .mini {
+    font-size: 2vw;
+    margin-left: 5vw;
+}
+
+.o-ui-arrow {
+    transform: rotate(90deg);
+}
+
+.o-ui-arrow path {
+    stroke: rgb(0, 0, 0);
+    stroke-width: 2px;
+}
+
+
+#images {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+    align-items: baseline; /* Align items to the top initially */
+    justify-content: space-between;
+    margin-top: 6vw;
+    padding: 0 5vw;
+    position: relative;
+}
+
+.cnt {
+    overflow: hidden;
+    border-radius: 50px;
+    position: relative;
+}
+
+.cnt img {
+    width: 105%;
+}
+
+.cnt1 {
+    width: 55%;
+}
+
+.cnt2 {
+    width: 28%;
+}
+
+.cnt3 {
+    width: 100%; /* Full width for the third image */
+    height: 800px; /* Increased height for more space */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    margin-top: 50px;
+    border-radius: 50px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow, ensure image fits within container */
+    max-width: 1200px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.cnt3 img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+    border-radius: 50px; 
+}
+
+
+#home {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #work {
+        padding: 50px 20px;
+    }
+
+    #work .workrow {
+        padding: 0 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .workrow h1 {
+        font-size: 12vw;
+        justify-content: center;
+    }
+
+    .workrow h1 .mini {
+        font-size: 4vw;
+        margin-left: 2vw;
+    }
+
+    #images {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4vw;
+        padding: 0;
+    }
+
+    .cnt1,
+    .cnt2 {
+        width: 90%; /* Full width with slight margin */
+        margin-bottom: 20px;
+        height: 300px; /* Adjust height for mobile */
+        position: relative; /* Makes sure the container is positioned correctly */
+    }
+
+    .cnt {
+        width: 100%; /* Ensure the container takes full width */
+        height: 100%; /* Ensure the container takes full height */
+        overflow: hidden;
+        position: relative;
+        border-radius: 30px; /* Rounded corners for aesthetic */
+        background-color: transparent; /* No background color */
+    }
+
+    .cnt img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the container without distortion */
+        object-position: center; /* Centers the image */
+        border-radius: 30px; /* Match border radius of container for consistency */
+    }
+}
